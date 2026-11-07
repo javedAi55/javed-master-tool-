@@ -241,7 +241,7 @@ with st.sidebar:
 
     model_selected = st.selectbox(
         "Active Model",
-        options=["gemini-1.5-flash", "gemini-2.0-flash", "gemini-2.5-pro"],
+        options=["gemini-3.8-flash", "gemini-2.0-flash", "gemini-2.5-pro"],
         index=0,
         help="Flash is optimized for high-speed generation; Pro is recommended for complex code & long proposals."
     )
