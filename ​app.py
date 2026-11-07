@@ -3,7 +3,6 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Javed AI Master Tool", page_icon="⚡", layout="wide")
 
-# Custom HTML/CSS interface for Javed AI Master Tool
 html_code = """
 <!DOCTYPE html>
 <html lang="en">
@@ -107,6 +106,59 @@ html_code = """
             cursor: pointer;
             margin-top: 10px;
         }
+        /* Result & Output Box Styles */
+        .output-section {
+            background: #141b2d;
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid #1e293b;
+            margin-top: 15px;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .tab {
+            background: #1e293b;
+            color: #f59e0b;
+            border: 1px solid #f59e0b;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .tab.inactive {
+            background: #0f172a;
+            color: #94a3b8;
+            border-color: #334155;
+        }
+        .code-box {
+            background: #090d16;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 12px;
+            color: #38bdf8;
+            overflow-x: auto;
+            max-height: 200px;
+        }
+        .sub-btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .sub-btn {
+            background: #1e293b;
+            color: #fff;
+            border: 1px solid #334155;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -155,10 +207,23 @@ html_code = """
         <button class="action-btn">⚡ GENERATE MASTER DELIVERABLE</button>
     </div>
 
+    <div class="output-section">
+        <div class="tabs">
+            <div class="tab">&lt;/&gt; Generated Code/Result</div>
+            <div class="tab inactive">👁️ Live Web Preview</div>
+        </div>
+        <div class="code-box">
+            Hello! I am **Javed's Ultimate AI Master Tool**.<br>
+            Ready to generate Web Apps, Python Scripts, 3D Assets, and Fiverr HD Banners!
+        </div>
+        <div class="sub-btn-group">
+            <button class="sub-btn">📋 Copy Code</button>
+            <button class="sub-btn">📥 Download File</button>
+        </div>
+    </div>
+
 </body>
 </html>
 """
 
-components.html(html_code, height=750, scrolling=True)
-
-
+components.html(html_code, height=900, scrolling=True)
