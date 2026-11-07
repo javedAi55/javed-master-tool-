@@ -22,15 +22,8 @@ st.markdown("""
         border-color: #0284c7;
         color: #0284c7;
     }
-    .main-btn>button {
-        background: linear-gradient(90deg, #f59e0b, #d97706) !important;
-        color: #000000 !important;
-        font-size: 16px !important;
-        font-weight: bold !important;
-        border: none !important;
-    }
     </style>
-""", unsafe_style=True)
+""", unsafe_allow_html=True)
 
 # Header Section
 st.title("⚡ JAVED AI MASTER TOOL")
@@ -68,9 +61,7 @@ st.info(f"موجودہ منتخب شدہ ماڈیول: **{st.session_state.selec
 user_prompt = st.text_area("PASTE PROMPT FROM GEMINI / CLIENT REQUIREMENTS:", placeholder="یہاں اپنی تفصیلات لکھیں...", height=100)
 
 # Generate Action
-st.markdown('<div class="main-btn">', unsafe_style=True)
 generate_clicked = st.button("⚡ GENERATE MASTER DELIVERABLE")
-st.markdown('</div>', unsafe_style=True)
 
 # Output Section
 if generate_clicked or user_prompt:
